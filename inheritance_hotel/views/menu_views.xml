@@ -1,0 +1,13 @@
+<odoo>
+    <data>
+        <!-- Main Menu -->
+        <menuitem id="hotel_management_main_menu" name="Hotel Management Inherit" sequence="10"/>
+
+        <!-- Submenus -->
+        <menuitem id="hotel_menu" name="Hotels" parent="hotel_management_main_menu" action="action_hotel_management" sequence="20"/>
+        <menuitem id="room_menu" name="Rooms" parent="hotel_management_main_menu" action="action_room_management" sequence="30"/>
+        <menuitem id="feature_menu" name="Features" parent="hotel_management_main_menu" action="action_feature_management" sequence="40"/>
+        <menuitem id="booking_menu" name="Bookings History" parent="hotel_management_main_menu" action="action_booking_management" sequence="50"/>
+
+    </data>
+</odoo>

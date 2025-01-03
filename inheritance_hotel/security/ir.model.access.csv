@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hotel_management,access_hotel_management,model_hotel_management,,1,1,1,1
+access_room_management,access_room_management,model_room_management,,1,1,1,1
+access_booking_history,access_booking_history,model_booking_history,,1,1,1,1

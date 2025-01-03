@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record id="view_room_feature_form_inherited" model="ir.ui.view">
+            <field name="name">room.feature.form.inherited</field>
+            <field name="model">room.feature</field>
+            <field name="inherit_id" ref="hotel.view_room_feature_form"/>
+        </record>
+
+        <record id="view_room_feature_list_inherited" model="ir.ui.view">
+            <field name="name">room.feature.list.inherited</field>
+            <field name="model">room.feature</field>
+            <field name="inherit_id" ref="hotel.view_room_feature_list"/>
+        </record>
+    </data>
+</odoo>

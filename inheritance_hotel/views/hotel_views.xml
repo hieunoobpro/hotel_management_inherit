@@ -1,0 +1,58 @@
+<odoo>
+    <record id="view_hotel_management_form_inherit" model="ir.ui.view">
+        <field name="name">hotel.management.form.inherit</field>
+        <field name="model">hotel.management</field>
+        <field name="inherit_id" ref="hotel.view_hotel_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Booking History">
+                    <field name="booking_history_ids" widget="one2many_list" mode="list,form">
+                        <list>
+                            <field name="customer_name"/>
+                            <field name="room_code"/>
+                            <field name="room_type"/>
+                            <field name="status"/>
+                            <field name="checkin_date"/>
+                            <field name="checkout_date"/>
+                        </list>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Hotel Form View -->
+    <record id="view_hotel_form" model="ir.ui.view">
+        <field name="name">hotel.management.form</field>
+        <field name="model">hotel.management</field>
+        <field name="arch" type="xml">
+            <form string="Hotel Management">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="address"/>
+                        <field name="floors"/>
+                        <field name="total_rooms" readonly="1"/>
+                    </group>
+                    <notebook>
+                        <page string="Rooms">
+                            <field name="room_ids">
+                                <list string="Rooms">
+                                    <field name="room_code"/>
+                                    <field name="bed_type"/>
+                                    <field name="price"/>
+                                    <field name="status"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                    <footer>
+                        <button name="action_confirm_create" type="object" string="Create" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
